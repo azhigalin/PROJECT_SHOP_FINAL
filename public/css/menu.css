@@ -1,0 +1,189 @@
+.mobile-menu {
+  margin-right: 12px;
+}
+
+.mobile-menu-checkbox {
+  display: none;
+}
+
+.mobile-menu-btn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 35px;
+  height: 40px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.mobile-menu-icon {
+  display: block;
+  position: relative;
+  background: white;
+  width: 90%;
+  height: 3px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.mobile-menu-icon::after,
+.mobile-menu-icon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: white;
+  width: 100%;
+  height: 3px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.mobile-menu-icon::before {
+  top: -11px;
+}
+
+.mobile-menu-icon::after {
+  top: 11px;
+}
+
+.mobile-menu-checkbox:checked ~ .mobile-menu-btn .mobile-menu-icon::before,
+.mobile-menu-checkbox:checked ~ .mobile-menu-btn .mobile-menu-icon::after {
+  top: 0;
+}
+
+.mobile-menu-checkbox:checked ~ .mobile-menu-btn .mobile-menu-icon {
+  background: transparent;
+}
+
+.mobile-menu-checkbox:checked ~ .mobile-menu-btn .mobile-menu-icon::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.mobile-menu-checkbox:checked ~ .mobile-menu-btn .mobile-menu-icon::before {
+  transform: rotate(4deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.menu-list {
+  display: none;
+  width: 100%;
+  max-width: 232px;
+  min-height: 480px;
+  /* значение в свойстве min-height удобно задать через переменную равную высоте второго блока */
+  padding: 0px 33px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fff;
+  position: absolute;
+  top: 78px;
+  /* значение в свойстве top удобно задать через переменную равную высоте первого блока */
+  right: 0;
+  z-index: 20;
+}
+
+
+
+.mobile-menu-checkbox[type="checkbox"]:checked ~ .menu-list {
+  display: block;
+}
+
+.menu {
+  max-width: 232px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.menu-list,
+.menu-sublist {
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu-list {
+  padding: 37px 34px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.menu-list-item {
+  margin: 0 0 20px 0;
+}
+
+/* .menu-list-item:last-child {
+    margin: 0;
+  } */
+.menu-list-item:first-child {
+  margin: 0 0 24px 0;
+  font-weight: bold;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: none;
+  text-transform: uppercase;
+}
+
+.menu-list-item > a {
+  display: block;
+  margin: 0 0 12px 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #F16D7F;
+}
+
+.menu-list-item > a:hover {
+  text-decoration: underline;
+}
+
+.menu-list-item > a:active {
+  text-decoration: none;
+  color: #F16D7F;
+}
+
+.menu-list-title {
+  display: block;
+  margin: 9px 0 24px 0;
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.menu-sublist {
+  padding: 0 0 0 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.menu-sublist-item {
+  margin: 0 0 11px 0;
+}
+
+.menu-sublist-item a {
+  color: #6f6e6e;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: none;
+  text-decoration: none;
+}
+
+.menu-sublist-item a:hover {
+  text-decoration: underline;
+}
+
+.menu-sublist-item a:active {
+  text-decoration: none;
+  color: #6f6e6e;
+}
